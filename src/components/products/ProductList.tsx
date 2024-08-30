@@ -2,7 +2,6 @@
 import useProductStore from "@/store/productStore";
 import { useEffect } from "react";
 import ProductCard from "./ProductCard";
-import Carusel from "../carusel/page";
 
 const ProductList = () => {
   const { loading, products, error, fetchProducts } = useProductStore();
@@ -13,7 +12,6 @@ const ProductList = () => {
 
   return (
     <div className="container mx-auto">
-      <Carusel />
       {loading && <h1>Loading...</h1>}
       {(error as Error) && <h3>{(error as Error).message}</h3>}
       {products.length > 0 && (

@@ -1,6 +1,7 @@
+"use client";
 import { ProductType } from "@/types/product.types";
-import Carusel from "../carusel/page";
-
+import Image from "next/image";
+import { SlHeart } from "react-icons/sl";
 type ProductCardProps = {
   product: ProductType;
 };
@@ -12,8 +13,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <div className="box flex  flex-col">
           <div className="box-one"></div>
           <div className="box-two">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 w-[300px] h-[350px] ">
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 w-[300px] h-[380px] ">
               <div className="relative ">
+                <SlHeart className="mt-3 ml-2 text-xl " />
                 <img
                   src={product.image}
                   alt={product.title}
